@@ -573,7 +573,7 @@ public class DatabaseLogic extends UnicastRemoteObject implements Database {
             long sessiontoken = rs.getLong("Token");
             Timestamp expire = rs.getTimestamp("Expire");
             LocalDateTime exp = expire.toLocalDateTime();
-            //exp = exp.plusDays(1);
+            exp = exp.plusDays(1);
 
 
             if(sessiontoken==token){
